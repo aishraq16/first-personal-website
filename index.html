@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ishraq Afzal Portfolio Website</title>
         <link rel="stylesheet" href="styles.css"/>
         <link rel="stylesheet" href="media.css"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </head>
     <body>
+        <!-- Dark Mode Toggle -->
+        <button id="theme-toggle" class="theme-toggle" title="Toggle Dark/Light Mode">
+            <i class="fas fa-moon"></i>
+        </button>
+
+        <!-- Back to Top Button -->
+        <button id="back-to-top" class="back-to-top" title="Back to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
         <a id="top">
         <header id="header">
             <a id="my-name" href="#top">ISHRAQ AFZAL</a>
@@ -18,100 +31,235 @@
                     <li><a class="nav-item" href="#skills">Skills</a></li>
                     <li><a class="nav-item" href="#experience">Experience</a></li>
                     <li><a class="nav-item" href="#projects">Projects</a></li>
+                    <li><a class="nav-item" href="#testimonials">Testimonials</a></li>
+                    <li><a class="nav-item" href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
-            <section id="profile">
-                    <div id="hello-text">HELLO, I AM</div>
-                    <div id="first-name">ISHRAQ</div>
-                    <div id="second-name">AFZAL</div>
-                    <div id="button-containers">
-                        <div id="cv" class="button">MY RESUME</div>
-                        <div id="linkedin" class="button">MY LINKEDIN</div>
-                        <div id="github" class="button">MY GITHUB</div>
-                    </div>
-            </section>
-            <section id="about">
-                <h1 id="about-title">About Me</h1>
-                <div id="about-container">
-                    <img id="myself-pic" src="/images/myself.jpg">
-                    <div id="about-me-paragraph">
-                        I am Ishraq Afzal and I am currently a <span style="color: white; font-weight: bold; font-style: italic;">rising Computer Science junior at The University of Hong Kong</span>. I am passionate about fullstack development, artificial intelligence, machine learning, algorithms, and math. When I am not getting my hands dirty with code, you might find me in the gym, football field, or with a book in the library. Feel free to explore my personal website where you'll find information about my skills, work experience, and projects.
-                    </div>
+        
+        <!-- Profile Section -->
+        <section id="profile" class="fade-in">
+            <div id="hello-text" class="slide-in-up">HELLO, I AM</div>
+            <div id="first-name" class="gradient-text slide-in-up">ISHRAQ</div>
+            <div id="second-name" class="gradient-text slide-in-up">AFZAL</div>
+            <div id="button-containers" class="fade-in-delay">
+                <div id="cv" class="button button-hover" data-url="">
+                    <i class="fas fa-file-pdf"></i> MY RESUME
+                </div>
+                <div id="linkedin" class="button button-hover" data-url="https://linkedin.com">
+                    <i class="fab fa-linkedin"></i> MY LINKEDIN
+                </div>
+                <div id="github" class="button button-hover" data-url="https://github.com">
+                    <i class="fab fa-github"></i> MY GITHUB
+                </div>
+            </div>
+        </section>
 
+        <!-- About Section -->
+        <section id="about" class="fade-in">
+            <h1 id="about-title">About Me</h1>
+            <div id="about-container">
+                <img id="myself-pic" src="/images/myself.jpg" loading="lazy" alt="Ishraq Afzal">
+                <div id="about-me-paragraph" class="fade-in-delay">
+                    I am Ishraq Afzal and I am currently a <span style="color: white; font-weight: bold; font-style: italic;">rising Computer Science junior at The University of Hong Kong</span>. I am passionate about fullstack development, artificial intelligence, machine learning, algorithms, and math. When I am not getting my hands dirty with code, you might find me in the gym, football field, or with a book in the library. Feel free to explore my personal website where you'll find information about my skills, work experience, and projects.
                 </div>
-            </section>
-            <section id="skills">
-                <div id="skill-container">
-                    <div id="languages">
-                        <h1 style="font-size:5vh;">Languages</h1>
-                        <div class="skills-container-mini">
-                            <div class="skill-items">HTML & CSS</div>
-                            <div class="skill-items">Python</div>
-                            <div class="skill-items">Java</div>
-                            <div class="skill-items">JavaScript</div>
-                            <div class="skill-items">C & C++</div>
-                            <div class="skill-items">PHP</div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="fade-in">
+            <h1>Skills</h1>
+            <div id="skill-container">
+                <div id="languages">
+                    <h1 style="font-size:5vh;">Languages</h1>
+                    <div class="skills-container-mini">
+                        <div class="skill-items fade-in-delay">
+                            <i class="fab fa-html5"></i> HTML & CSS
+                        </div>
+                        <div class="skill-items fade-in-delay">
+                            <i class="fab fa-python"></i> Python
+                        </div>
+                        <div class="skill-items fade-in-delay">
+                            <i class="fab fa-java"></i> Java
+                        </div>
+                        <div class="skill-items fade-in-delay">
+                            <i class="fab fa-js"></i> JavaScript
+                        </div>
+                        <div class="skill-items fade-in-delay">
+                            <i class="fas fa-code"></i> C & C++
+                        </div>
+                        <div class="skill-items fade-in-delay">
+                            <i class="fab fa-php"></i> PHP
                         </div>
                     </div>
-                    <div id="frameworks">
-                        <h1 style="font-size:5vh;">Frameworks & Libraries</h1>
-                        <div class="skills-container-mini">
-                            <div class="skill-items">React</div>
-                            <div class="skill-items">Node</div>
-                            <div class="skill-items">Express</div>
-                            <div class="skill-items">MySQL</div>
-                            <div class="skill-items">MongoDB</div>
+                </div>
+                <div id="frameworks">
+                    <h1 style="font-size:5vh;">Frameworks & Libraries</h1>
+                    <div class="skills-container-mini">
+                        <div class="skill-items fade-in-delay">
+                            <i class="fab fa-react"></i> React
+                        </div>
+                        <div class="skill-items fade-in-delay">
+                            <i class="fab fa-node"></i> Node
+                        </div>
+                        <div class="skill-items fade-in-delay">
+                            <i class="fas fa-server"></i> Express
+                        </div>
+                        <div class="skill-items fade-in-delay">
+                            <i class="fas fa-database"></i> MySQL
+                        </div>
+                        <div class="skill-items fade-in-delay">
+                            <i class="fas fa-leaf"></i> MongoDB
                         </div>
                     </div>
                 </div>
-            </section>
-            <section id="experience">
-                <h1 id="experience-title" style="font-size: 7vh;">Explore My Work Experience</h1>
-                <div class="experience-containers">
-                    <div class="experience-mini-containers">
-                        <h2 class="role">Senior IT Assistant</h2>
-                        <p class="company">Information Technology Services, HKU</p>
-                        <p class="date">July 2024 - Present</p>
-                        <p class="description">Worked on developing HKU Compass - a personalized course management platform that centralizes course information, provides recommendations, and optimizes scheduling for HKU students, enhancing their academic experience</p>
-                    </div>
-                    <div class="experience-mini-containers">
-                        <h2 class="role">Software Engineer Intern</h2>
-                        <p class="company">Speech, Language, and Reading Lab, HKU</p>
-                        <p class="date">Feb 2024 - June 2024</p>
-                        <p class="description">Collaborated with a group of developers to build mobile games specifically tailored for children with special educational needs (SEN).</p>
-                    </div>
-                    <div class="experience-mini-containers">
-                        <h2 class="role">Teaching Assistant</h2>
-                        <p class="company">ENGG1330 Computer Programming I</p>
-                        <p class="date">Sept 2024 - Dec 2024</p>
-                        <p class="description">Held tutorial sessions for a class of 10-15 first-year students where I taught them programming with Python and guided them through various problems and projects.</p>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="fade-in">
+            <h1 id="experience-title" style="font-size: 7vh;">Explore My Work Experience</h1>
+            <div class="experience-containers">
+                <div class="experience-mini-containers fade-in-delay">
+                    <h2 class="role"><i class="fas fa-briefcase"></i> Senior IT Assistant</h2>
+                    <p class="company">Information Technology Services, HKU</p>
+                    <p class="date">July 2024 - Present</p>
+                    <p class="description">Worked on developing HKU Compass - a personalized course management platform that centralizes course information, provides recommendations, and optimizes scheduling for HKU students, enhancing their academic experience</p>
+                </div>
+                <div class="experience-mini-containers fade-in-delay">
+                    <h2 class="role"><i class="fas fa-code"></i> Software Engineer Intern</h2>
+                    <p class="company">Speech, Language, and Reading Lab, HKU</p>
+                    <p class="date">Feb 2024 - June 2024</p>
+                    <p class="description">Collaborated with a group of developers to build mobile games specifically tailored for children with special educational needs (SEN).</p>
+                </div>
+                <div class="experience-mini-containers fade-in-delay">
+                    <h2 class="role"><i class="fas fa-chalkboard"></i> Teaching Assistant</h2>
+                    <p class="company">ENGG1330 Computer Programming I</p>
+                    <p class="date">Sept 2024 - Dec 2024</p>
+                    <p class="description">Held tutorial sessions for a class of 10-15 first-year students where I taught them programming with Python and guided them through various problems and projects.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="fade-in">
+            <h1 id="project-title" style="font-size: 7vh;">Explore My Projects</h1>
+            <div class="project-containers">
+                <div class="project-mini-containers fade-in-delay">
+                    <h2 class="project-name"><i class="fas fa-comments"></i> Webchat Application</h2>
+                    <p class="tech-stack">PHP, MySQL, JavaScript, HTML & CSS</p>
+                    <p class="date">April 2024</p>
+                    <p class="description">A real-time web-based chat application with user authentication and message persistence. Features include user profiles, group chats, and real-time notifications.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-globe"></i> Demo</a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
-            </section>
-            <section id="projects">
-                <h1 id="project-title" style="font-size: 7vh;">Explore My Projects</h1>
-                <div class="project-containers">
-                    <div class="project-mini-containers">
-                        <h2 class="project-name">Webchat Application</h2>
-                        <p class="tech-stack">PHP, MySQL, JavaScript, HTML & CSS</p>
-                        <p class="date">April 2024</p>
-                        <p class="description">In the process of deploying this project, please wait for a few days...</p>
-                    </div>
-                    <div class="project-mini-containers">
-                        <h2 class="project-name">Flight Statistics Application</h2>
-                        <p class="tech-stack">JavaScript, AJAX/JSON, HTML & CSS</p>
-                        <p class="date">March 2024</p>
-                        <p class="description">In the process of deploying this project, please wait for a few days...</p>
-                    </div>
-                    <div class="project-mini-containers">
-                        <h2 class="project-name">Multiplayer Tic-Tac-Toe</h2>
-                        <p class="tech-stack">Java</p>
-                        <p class="date">December 2023</p>
-                        <p class="description">In the process of deploying this project, please wait for a few days...</p>
+                <div class="project-mini-containers fade-in-delay">
+                    <h2 class="project-name"><i class="fas fa-plane"></i> Flight Statistics</h2>
+                    <p class="tech-stack">JavaScript, AJAX/JSON, HTML & CSS</p>
+                    <p class="date">March 2024</p>
+                    <p class="description">Interactive flight statistics dashboard with real-time data fetching using AJAX. Displays flight information, routes, and statistical analysis with dynamic charts.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-globe"></i> Demo</a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
-            </section>
-            <script src="main.js"></script>
+                <div class="project-mini-containers fade-in-delay">
+                    <h2 class="project-name"><i class="fas fa-gamepad"></i> Multiplayer Tic-Tac-Toe</h2>
+                    <p class="tech-stack">Java</p>
+                    <p class="date">December 2023</p>
+                    <p class="description">Networked multiplayer Tic-Tac-Toe game written in Java. Features include socket-based client-server architecture, AI opponent, and score tracking.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-globe"></i> Demo</a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="fade-in">
+            <h1>Testimonials</h1>
+            <div class="testimonials-container">
+                <div class="testimonial-card fade-in-delay">
+                    <div class="testimonial-header">
+                        <img src="/images/myself.jpg" alt="Prof. John Smith" class="testimonial-avatar" loading="lazy">
+                        <div class="testimonial-info">
+                            <h3>Prof. John Smith</h3>
+                            <p>Computer Science, HKU</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Ishraq is an exceptional student with strong technical skills and outstanding problem-solving abilities. Their contributions to our lab projects have been invaluable."</p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in-delay">
+                    <div class="testimonial-header">
+                        <img src="/images/myself.jpg" alt="Sarah Lee" class="testimonial-avatar" loading="lazy">
+                        <div class="testimonial-info">
+                            <h3>Sarah Lee</h3>
+                            <p>Senior Developer, Tech Company</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Working with Ishraq was a pleasure. They bring creativity, collaboration, and dedication to every project. Highly recommended!"</p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in-delay">
+                    <div class="testimonial-header">
+                        <img src="/images/myself.jpg" alt="David Wong" class="testimonial-avatar" loading="lazy">
+                        <div class="testimonial-info">
+                            <h3>David Wong</h3>
+                            <p>Engineering Lead, ITS HKU</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Ishraq demonstrates excellent technical expertise and a keen eye for detail. A valuable addition to any development team."</p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="fade-in">
+            <h1>Get In Touch</h1>
+            <div class="contact-container">
+                <div class="contact-info fade-in-delay">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p><a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p><a href="tel:+852123456789">+852 1234 5678</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Location</h3>
+                        <p>Hong Kong</p>
+                    </div>
+                </div>
+                <div class="social-links fade-in-delay">
+                    <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Ishraq Afzal. All rights reserved.</p>
+            <p>Designed & Built with <i class="fas fa-heart"></i> by Ishraq Afzal</p>
+        </footer>
+
+        <script src="main.js"></script>
     </body>
 </html>

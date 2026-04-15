@@ -1,0 +1,565 @@
+/* Tablet Screens (768px - 1024px) */
+@media (max-width: 1024px) {
+    :root {
+        --name-size: 15vh;
+        --title-size: 8vh;
+        --text-size: 2.5vh;
+    }
+
+    section {
+        margin: 10vh;
+        padding-top: 8vh;
+    }
+
+    header {
+        margin: 3vh;
+        height: 8vh;
+        flex-wrap: wrap;
+    }
+
+    #my-name {
+        font-size: 4vh;
+    }
+
+    #nav-bar ul {
+        gap: 5vh;
+    }
+
+    #nav-bar ul li {
+        flex: 1;
+    }
+
+    /* Profile Section */
+    #button-containers {
+        gap: 3vh;
+        flex-wrap: wrap;
+    }
+
+    .button {
+        height: 12vh;
+        width: 25vh;
+        font-size: 2.5vh;
+    }
+
+    .button:hover {
+        height: 14vh;
+        width: 27vh;
+    }
+
+    /* About Section */
+    #about-container {
+        gap: 3vh;
+        flex-direction: column;
+    }
+
+    #myself-pic {
+        height: 40vh;
+        width: 100%;
+        max-width: 40vh;
+    }
+
+    #about-me-paragraph {
+        font-size: 2.5vh;
+        padding: 3vh;
+    }
+
+    /* Skills Section */
+    #skill-container {
+        flex-direction: column;
+        gap: 8vh;
+    }
+
+    .skills-container-mini {
+        height: 50vh;
+        gap: 2vh;
+    }
+
+    .skill-items {
+        font-size: 3vh;
+        width: 50%;
+    }
+
+    /* Experience and Projects */
+    .experience-containers, .project-containers {
+        flex-wrap: wrap;
+        height: auto;
+        gap: 5vh;
+    }
+
+    .experience-mini-containers, .project-mini-containers {
+        width: 45%;
+        min-height: 45vh;
+    }
+
+    .experience-mini-containers:hover, .project-mini-containers:hover {
+        width: 48%;
+        height: auto;
+    }
+
+    .project-name, .role {
+        font-size: 4vh;
+    }
+
+    /* Testimonials */
+    .testimonials-container {
+        flex-direction: column;
+    }
+
+    .testimonial-card {
+        width: 80%;
+    }
+
+    /* Contact Section */
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contact-item {
+        width: 80%;
+    }
+
+    .social-links {
+        margin-top: 3vh;
+    }
+}
+
+/* Mobile Screens (480px - 767px) */
+@media (max-width: 767px) {
+    :root {
+        --name-size: 10vh;
+        --title-size: 5vh;
+        --text-size: 2vh;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    section {
+        margin: 5vh;
+        padding-top: 5vh;
+        min-height: 60vh;
+    }
+
+    /* Header */
+    header {
+        margin: 2vh;
+        padding: 0.5rem;
+        height: 6vh;
+        flex-direction: column;
+        gap: 1vh;
+    }
+
+    #my-name {
+        font-size: 3vh;
+    }
+
+    #nav-bar ul {
+        gap: 2vh;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-item:hover {
+        font-size: 2.2vh;
+    }
+
+    #my-name:hover {
+        font-size: 3.5vh;
+    }
+
+    /* Profile Section */
+    #hello-text {
+        font-size: 1.8vh;
+    }
+
+    #first-name, #second-name {
+        height: 12vh;
+        font-size: 12vh;
+    }
+
+    #first-name {
+        top: -2vh;
+    }
+
+    #second-name {
+        bottom: 5vh;
+    }
+
+    #button-containers {
+        flex-direction: column;
+        gap: 2vh;
+        width: 100%;
+    }
+
+    .button {
+        height: 10vh;
+        width: 80%;
+        font-size: 2vh;
+        border: 3px solid #049A8F;
+    }
+
+    .button:hover {
+        height: 11vh;
+        width: 85%;
+        font-size: 2.2vh;
+    }
+
+    .button i {
+        font-size: 2.5vh;
+    }
+
+    /* About Section */
+    #about {
+        min-height: auto;
+    }
+
+    #about h1 {
+        font-size: 4vh;
+        margin-bottom: 2vh;
+    }
+
+    #about-container {
+        flex-direction: column;
+        gap: 2vh;
+        align-items: center;
+    }
+
+    #myself-pic {
+        height: 30vh;
+        width: 100%;
+        max-width: 30vh;
+    }
+
+    #about-me-paragraph {
+        font-size: 2vh;
+        padding: 2vh;
+        border-radius: 15px;
+    }
+
+    /* Skills Section */
+    #skill-container {
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    #languages h1, #frameworks h1 {
+        font-size: 3.5vh !important;
+    }
+
+    .skills-container-mini {
+        height: auto;
+        gap: 1.5vh;
+        margin-top: 5vh;
+    }
+
+    .skill-items {
+        font-size: 2vh;
+        width: 70%;
+        border-radius: 15px;
+        padding: 1vh 2vh;
+    }
+
+    .skill-items i {
+        font-size: 2.5vh;
+    }
+
+    /* Experience Section */
+    #experience-title, #project-title {
+        font-size: 4vh !important;
+    }
+
+    .experience-containers, .project-containers {
+        flex-direction: column;
+        height: auto;
+        gap: 3vh;
+        align-items: center;
+    }
+
+    .experience-mini-containers, .project-mini-containers {
+        width: 100%;
+        min-height: 30vh;
+        padding: 2vh;
+        border-radius: 15px;
+    }
+
+    .experience-mini-containers:hover, .project-mini-containers:hover {
+        width: 100%;
+        background-color: #05b5a9;
+    }
+
+    .project-name, .role {
+        font-size: 3vh;
+        margin-bottom: 1vh;
+    }
+
+    .company, .tech-stack {
+        font-size: 1.8vh;
+    }
+
+    .date {
+        font-size: 1.6vh;
+    }
+
+    .description {
+        display: block;
+        font-size: 1.8vh;
+        margin-top: 1vh;
+    }
+
+    .project-links {
+        display: flex !important;
+        flex-direction: column;
+        gap: 1vh;
+    }
+
+    .project-link {
+        font-size: 1.6vh;
+        padding: 0.8vh 1.5vh;
+    }
+
+    /* Testimonials */
+    .testimonials-container {
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .testimonial-card {
+        width: 95%;
+        min-height: auto;
+        padding: 2vh;
+    }
+
+    .testimonial-header {
+        gap: 1.5vh;
+    }
+
+    .testimonial-avatar {
+        width: 50px;
+        height: 50px;
+    }
+
+    .testimonial-info h3 {
+        font-size: 1.8vh;
+    }
+
+    .testimonial-info p {
+        font-size: 1.4vh;
+    }
+
+    .testimonial-text {
+        font-size: 1.7vh;
+    }
+
+    /* Contact Section */
+    .contact-container {
+        flex-direction: column;
+        gap: 3vh;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contact-item {
+        width: 100%;
+        font-size: 1.8vh;
+    }
+
+    .contact-item i {
+        font-size: 2.5vh;
+    }
+
+    .contact-item h3 {
+        font-size: 2vh;
+    }
+
+    .social-links {
+        gap: 2vh;
+    }
+
+    .social-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    /* Footer */
+    .footer {
+        font-size: 1.6vh;
+        padding: 3vh;
+    }
+
+    .footer p {
+        margin: 0.5vh 0;
+    }
+
+    /* Theme and Back to Top Buttons */
+    .theme-toggle, .back-to-top {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+
+    .theme-toggle {
+        top: 10px;
+        right: 10px;
+    }
+
+    .back-to-top {
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+/* Extra Small Screens (under 480px) */
+@media (max-width: 480px) {
+    :root {
+        --name-size: 8vh;
+        --title-size: 4vh;
+        --text-size: 1.8vh;
+    }
+
+    section {
+        margin: 3vh;
+        padding-top: 3vh;
+        min-height: auto;
+    }
+
+    header {
+        margin: 1vh;
+        padding: 0.3rem;
+        height: auto;
+        gap: 0.5vh;
+    }
+
+    #my-name {
+        font-size: 2.5vh;
+    }
+
+    #nav-bar ul {
+        gap: 1.5vh;
+        font-size: 1.5vh;
+    }
+
+    .nav-item {
+        font-size: 1.5vh;
+    }
+
+    #first-name, #second-name {
+        height: 9vh;
+        font-size: 9vh;
+    }
+
+    #hello-text {
+        font-size: 1.5vh;
+    }
+
+    .button {
+        height: 8vh;
+        width: 90%;
+        font-size: 1.6vh;
+    }
+
+    .button i {
+        font-size: 2vh;
+    }
+
+    #myself-pic {
+        height: 25vh;
+        max-width: 25vh;
+    }
+
+    #about-me-paragraph {
+        font-size: 1.7vh;
+        padding: 1.5vh;
+    }
+
+    #skill-container {
+        gap: 3vh;
+    }
+
+    .skill-items {
+        font-size: 1.6vh;
+        width: 85%;
+        padding: 1vh;
+    }
+
+    .skill-items i {
+        font-size: 2vh;
+    }
+
+    .project-name, .role {
+        font-size: 2.3vh;
+    }
+
+    .project-mini-containers, .experience-mini-containers {
+        padding: 1.5vh;
+        min-height: 25vh;
+    }
+
+    .description {
+        font-size: 1.5vh;
+    }
+
+    .project-links {
+        gap: 0.8vh;
+    }
+
+    .project-link {
+        font-size: 1.4vh;
+        padding: 0.6vh 1.2vh;
+    }
+
+    .testimonial-card {
+        width: 100%;
+        padding: 1.5vh;
+    }
+
+    .testimonial-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .testimonial-info h3 {
+        font-size: 1.6vh;
+    }
+
+    .testimonial-text {
+        font-size: 1.5vh;
+    }
+
+    .contact-item {
+        width: 100%;
+        padding: 1.5vh;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .theme-toggle, .back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .theme-toggle {
+        top: 5px;
+        right: 5px;
+    }
+
+    .back-to-top {
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
