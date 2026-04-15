@@ -76,31 +76,19 @@ const cvButton = document.getElementById('cv');
 const linkedinButton = document.getElementById('linkedin');
 const githubButton = document.getElementById('github');
 
-// CV Button - Update with your actual resume URL
-cvButton.addEventListener('click', () => {
-    // Replace with your actual resume URL
-    window.open('#', '_blank');
-});
+// Show "coming soon" prompt for all buttons
+const showComingSoonPrompt = () => {
+    showNotification('This will be added soon! Check back later.', 'info');
+};
 
-// LinkedIn Button - Update with your actual LinkedIn profile
-linkedinButton.addEventListener('click', () => {
-    window.open('https://linkedin.com/in/yourprofile', '_blank');
-});
+// CV Button
+cvButton.addEventListener('click', showComingSoonPrompt);
 
-// GitHub Button - Update with your actual GitHub profile
-githubButton.addEventListener('click', () => {
-    window.open('https://github.com/yourprofile', '_blank');
-});
+// LinkedIn Button
+linkedinButton.addEventListener('click', showComingSoonPrompt);
 
-// Handle all button clicks with data-url attribute
-document.querySelectorAll('.button-hover').forEach(button => {
-    button.addEventListener('click', function() {
-        const url = this.getAttribute('data-url');
-        if (url && url !== '#' && url !== '') {
-            window.open(url, '_blank');
-        }
-    });
-});
+// GitHub Button
+githubButton.addEventListener('click', showComingSoonPrompt);
 
 // Smooth Scroll for Navigation Links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -178,19 +166,24 @@ function animateCounter(element, target, duration = 2000) {
 function showNotification(message, type = 'success') {
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
-    notification.textContent = message;
+    
+    let bgColor = '#66fcf1';
+    if (type === 'error') bgColor = '#ff6b6b';
+    if (type === 'info') bgColor = '#4ecdc4';
+    
     notification.style.cssText = `
         position: fixed;
         top: 20px;
         right: 20px;
         padding: 15px 25px;
-        background: ${type === 'success' ? '#66fcf1' : '#ff6b6b'};
+        background: ${bgColor};
         color: #023436;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         z-index: 10000;
         animation: slideInRight 0.3s ease-out;
     `;
+    notification.textContent = message;
     
     document.body.appendChild(notification);
     
